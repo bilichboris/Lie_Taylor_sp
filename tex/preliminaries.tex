@@ -4,18 +4,66 @@
 % Tor(A, B) = Tor(C, AxB)
 % Poincare duality
 % 
-Let $\lieg$ be an arbitary finite dimensional Lie algebra. We will denote by $\lmod{\lieg}$ and
-$\rmod\lieg$ the categories of left and right $\lieg$-modules respectively. We define functors 
-$\square^*\colon \lmod{\lieg}^{op} \to \rmod{\lieg}$ and $\square^\circ\colon \lmod{\lieg} \to
-\rmod{\lieg}$ as follows. The first $\square^*$, called duality functor, sends $\lieg$-module V to
-it's dual vector space, on which the right action of $\lieg$ defined as 
+
+\subsection{Notation} \todo{$\CC_\lambda$}
+In the article all algebras, including Lie algebras, are complex. 
+For the rest of this section we will denote by $\lieg$ an arbitary Lie algebra. We will
+denote by $\lmod{\lieg}$ and $\rmod\lieg$ the categories of left and right $\lieg$-modules respectively. 
+For $\lieg$-module $V$ defined the spaces 
+\begin{equation}
+    V^\lieg = \{v\in V\colon g\cdot v = 0 ~ \forall g\in \lieg \}, 
+\end{equation}
+called invariants and
+\begin{equation}
+    V_\lieg = V/gV,
+\end{equation}
+called coinvariants. It is known \todo{ref}, that $\square^\lieg$ and $\square_\lieg$ are actually functors
+from $\lmod\lieg$ (or $\rmod\lieg$) to the category of vector spaces over $\CC$.
+
+\subsection{Functors between categories of modules}
+We define two functors $\square^*\colon \\ \lmod{\lieg}^{op} \to \rmod{\lieg}$ and $\square^\circ\colon
+\lmod{\lieg} \to \rmod{\lieg}$ as follows. The first $\square^*$, called duality functor, sends 
+$\lieg$-module V to it's dual vector space, on which the right action of $\lieg$ is defined as 
 \[
     (f\cdot g) (v) = f(g\cdot v),~\text{ for all } f\in V^*,~v \in V,~g\in\lieg.
 \]
-The second $\square^\circ$, called antipode functor, sends $V$ to itself as vector space with right
+The second $\square^\circ$, called antipode functor, sends $V$ to itself as a vector space with right
 action
-\[
+\[\label{test}
     v\cdot g = - g\cdot v,~\text{ for all } v \in V,~g\in\lieg.
 \]
 These two functors define equivallence of categories $\lmod\lieg$, $\rmod\lieg$, $\lmod\lieg^{op}$
-and $\rmod\lieg^{op}$.  
+and $\rmod\lieg^{op}$. We will also denote by $\square^*$ and $\square^\circ$ functors from
+category of right $\lieg$-modules to left $\lieg$-modules, defined the same way. It is easy to
+see, that $(\square^*)^*$ and $(\square^\circ)^\circ$ are naturally isomorphic to the identity functor.
+
+Another pair of very important functors are $\square \otimes_\cmpl \square \colon \rmod\lieg \times
+\lmod\lieg \to \lmod\lieg$ and $\Hom_\cmpl(\square, \square)\colon \lmod\lieg^{op} \times
+\lmod\lieg \to \lmod\lieg$. If $V \in \rmod\lieg$ and $W \in \lmod\lieg$, then $V \otimes_\cmpl W$
+is the tensor product of $V$ and $W$ as vector space with action of $\lieg$, fully determined by the
+formula
+\[
+    g\cdot v\otimes w = v\otimes (g\cdot w) - (v\cdot g) \otimes w, \text{ for all } w\in W,~v\in
+    V,~ g\in \lieg 
+\].
+The Hom functor is defined as 
+\[
+    \Hom_\cmpl(V, W)=V^* \otimes_\cmpl W.
+\]
+
+
+\subsection{Homology and cohomology of Lie algebras}
+In this paragraph we recall the definitions of Lie algebra cohomology, which can be found in any
+related textbook \todo{ref weibel}.
+
+\begin{definition}
+    For $V\in \lmod\lieg$ and for all $i\in \ZZ_{\geq0}$ the homology functors are defined as 
+    \begin{equation}
+        H_i(\lieg, V) = \Tor_i^{U\lieg}(\cmpl, V),
+    \end{equation}
+    and, dually, the cohomology as
+    \begin{equation}
+        H^i(\lieg, V) = \Ext^i_{U\lieg}(\CC, V).
+    \end{equation}
+
+\end{definition}
