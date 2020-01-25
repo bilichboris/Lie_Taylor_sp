@@ -7,9 +7,11 @@
 
 \subsection{Notation} \todo{$\CC_\lambda$}
 In the article all algebras, including Lie algebras, are complex. 
-For the rest of this section we will denote by $\lieg$ an arbitary Lie algebra. We will
+For Lie algebra $\lieg$ we will use the notation $U\lieg$ to denote its enveloping algebra. We will
 denote by $\lmod{\lieg}$ and $\rmod\lieg$ the categories of left and right $\lieg$-modules respectively. 
-For $\lieg$-module $V$ defined the spaces 
+We write $\hat\lieg$ for the set of set of isomorphism classes of simple finite-dimensional
+$\lieg$-modules and $\cmpl$ for trivial bimodule. 
+For $\lieg$-module $V$ can be defined vector spaces 
 \begin{equation}
     V^\lieg = \{v\in V\colon g\cdot v = 0 ~ \forall g\in \lieg \}, 
 \end{equation}
@@ -18,9 +20,11 @@ called invariants and
     V_\lieg = V/gV,
 \end{equation}
 called coinvariants. It is known \todo{ref}, that $\square^\lieg$ and $\square_\lieg$ are actually functors
-from $\lmod\lieg$ (or $\rmod\lieg$) to the category of vector spaces over $\CC$.
+from $\lmod\lieg$ (or $\rmod\lieg$) to the category of vector spaces over $\CC$, isomorphic to
+$\Hom_\lieg(\CC, V)$ and $\CC \otimes_{U\lieg} V$ respectively. 
 
 \subsection{Functors between categories of modules}
+For the rest of this section we will denote by $\lieg$ an arbitary Lie algebra.
 We define two functors $\square^*\colon \\ \lmod{\lieg}^{op} \to \rmod{\lieg}$ and $\square^\circ\colon
 \lmod{\lieg} \to \rmod{\lieg}$ as follows. The first $\square^*$, called duality functor, sends 
 $\lieg$-module V to it's dual vector space, on which the right action of $\lieg$ is defined as 
@@ -36,6 +40,8 @@ These two functors define equivallence of categories $\lmod\lieg$, $\rmod\lieg$,
 and $\rmod\lieg^{op}$. We will also denote by $\square^*$ and $\square^\circ$ functors from
 category of right $\lieg$-modules to left $\lieg$-modules, defined the same way. It is easy to
 see, that $(\square^*)^*$ and $(\square^\circ)^\circ$ are naturally isomorphic to the identity functor.
+For some reasons, that will be clear later, for any $V\in \lmod\lieg$ we denote by $-V$ the left
+$\lieg$-module $(V^*)^\circ$.
 
 Another pair of very important functors are $\square \otimes_\cmpl \square \colon \rmod\lieg \times
 \lmod\lieg \to \lmod\lieg$ and $\Hom_\cmpl(\square, \square)\colon \lmod\lieg^{op} \times
@@ -50,11 +56,19 @@ The Hom functor is defined as
 \[
     \Hom_\cmpl(V, W)=V^* \otimes_\cmpl W.
 \]
+For $V, W \in \lmod\lieg$ (resp. $\rmod\lieg$), we will denote by $V\otimes W$ left $\lieg$-module
+$V^\circ \otimes_\CC W$ (resp. $V \otimes_\CC W^\circ$).
 
+For $V\in \lmod\lieg$ and $S \in \hat\lieg$, we will write $V_{S}$ for the $\lieg$-module $S\otimes_\CC V$. 
+If S is one-dimensional, it is fully determined by the character $\lambda \in (\lieg/[\lieg,
+\lieg])$ and in this case we will simply write $V_\lambda$ for it. For example, $\CC_\lambda$
+stands for one-dimensional module with action, given by $g\cdot s = \lambda(g)s$ for all $s\in
+\CC_\lambda$ and $g \in \lieg$.  
 
 \subsection{Homology and cohomology of Lie algebras}
 In this paragraph we recall the definitions of Lie algebra cohomology, which can be found in any
 related textbook \todo{ref weibel}.
+
 
 \begin{definition}
     For $V\in \lmod\lieg$ and for all $i\in \ZZ_{\geq0}$ the homology functors are defined as 
@@ -65,5 +79,7 @@ related textbook \todo{ref weibel}.
     \begin{equation}
         H^i(\lieg, V) = \Ext^i_{U\lieg}(\CC, V).
     \end{equation}
-
 \end{definition}
+
+The homology can be computed using Chevalley-Eilenberg projective resolution of
+\todo{Chevalley-Eilenberg, Poincare duality, Tor(A, B)=Tor(C, AxB)}
