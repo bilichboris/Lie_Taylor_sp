@@ -91,13 +91,13 @@ differential given by
 \hat{g}_j\cdots \wedge g_p,~\text{where } u\in U\lieg,~g_i \in \lieg.
 \end{equation}
 The following fact about homology will be used in the text.
-\begin{theorem}
+\begin{lemma} \label{t:torhomology}
    Let $V \in \rmod\lieg$ and $W \in \lmod\lieg$. Then  
     \[
         \Tor_k^{U\lieg}(V,W) \cong \Tor_k^{U\lieg}(\cmpl,V\otimes_\cmpl W) = H_k(\lieg, V\otimes_\cmpl W),
     \]
     for all $k\in \ZZ_{\geq 0}$.
-\end{theorem}
+\end{lemma}
 \begin{proof}
     Since functors $\CC\otimes_{U\lieg}(\square \otimes_\CC W)$ and $\square \otimes_{U\lieg} W$
     are naturally isomorphic, it suffices to show, that if $P_\bullet \to V$ is a flat
@@ -114,7 +114,7 @@ A useful variation of Poincare duality holds for finite dimensional Lie algebras
 \lieg$. We endow one-dimensional vector space $\bigwedge^n \lieg$ 
 with structure of left $\lieg$-module, which extends adjoint action by Leibnitz rule. 
 
-\begin{theorem}[Poincare duality]
+\begin{theorem}[Poincare duality] \label{t:poincare}
     For $0 \leq k \leq n$ and any left $\lieg$-module $V$, there are vector space isomorphism 
     \[
         H^k(\lieg, V^*) \cong H_k(\lieg, V)^*,
@@ -125,7 +125,7 @@ with structure of left $\lieg$-module, which extends adjoint action by Leibnitz 
     \]
     natural in V. Consequently
     \[
-        H^k(\lieg, V^*) \cong H^{n - k}(\lieg,  \bigwedge^n \lieg\otimes_\cmpl W)^*. 
+        H^k(\lieg, V^*) \cong H^{n - k}(\lieg,  \bigwedge^n \lieg\otimes_\cmpl V)^*. 
     \]
 \end{theorem}
 \begin{proof}

@@ -1,11 +1,38 @@
-Let $\lieg$ be an arbitary Lie algebra and $E$ be a left $\lieg$-module. 
-We will denote by $\hat\lieg$ the set of isomorphism classes of simple
+Let $\lieg$ be an arbitary Lie algebra and $V$ be a left $\lieg$-module. 
+Recall, that $\hat\lieg$ is the set of isomorphism classes of simple
 finite dimensional $\lieg$-modules.
 \begin{definition}
-    The Taylor spectrum of $E$ is the set, defined as
+    The Taylor spectrum of $V$ is the subset of $\hat\lieg$, defined as
     \[
-        \sigma(E)=\{ V\in \hat{\lieg} \mid \exists 
-            k \colon \Tor^{U\lieg}_k(V^*,E)\neq 0\}.
+        \sigma_\lieg(V)=\{ S\in \hat{\lieg} \mid \exists 
+            k \colon \Tor^{U\lieg}_k(S^*,V)\neq 0\}.
     \]
 \end{definition}
-From \todo{prove it} it follows, that the definition above coincides with the original Taylor's definition in case of abelian $\lieg$.
+We will simply write $\sigma(V)$ instead of $\sigma_\lieg(V)$ if it is clear what Lie algebra is
+considered.
+
+Let us provide several equivalent definitions, in order to use later.
+\begin{theorem}
+   For an arbitary $S\in\lieg$, the following are equivalent:
+   \begin{enumerate}
+       \item $S \in \sigma(V)$; 
+           
+       \item $H_k(\lieg, V_{-S}) \ne 0$ for some $k$;
+
+       \item $H^k(\lieg, \bigwedge^n\lieg\otimes_\CC V_{-S}) \ne 0$ for some $k$;
+
+       \item $S^* \otimes_\CC \bigwedge^n\lieg \in \sigma(V^*)$
+   \end{enumerate}
+\end{theorem}
+\begin{proof}
+    \begin{itemize}
+        \item[$1 \Rightarrow 2$]
+            This follows immediatly from Lemma \ref{t:torhomology}.
+
+        \item[$2 \Rightarrow 3$]
+            Poincare duality (Theorem \ref{t:poincare}).
+
+        \item[$3 \Rightarrow 4$] \todo{finish proof}
+
+    \end{itemize}
+\end{proof}
