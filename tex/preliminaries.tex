@@ -5,7 +5,7 @@
 % Poincare duality
 % 
 
-\subsection{Notation} \todo{$\CC_\lambda$}
+\subsection{Notation} 
 In the article all algebras, including Lie algebras, are complex. 
 For Lie algebra $\lieg$ we will use the notation $U\lieg$ to denote its enveloping algebra. We will
 denote by $\lmod{\lieg}$ and $\rmod\lieg$ the categories of left and right $\lieg$-modules respectively. 
@@ -40,8 +40,6 @@ These two functors define equivallence of categories $\lmod\lieg$, $\rmod\lieg$,
 and $\rmod\lieg^{op}$. We will also denote by $\square^*$ and $\square^\circ$ functors from
 category of right $\lieg$-modules to left $\lieg$-modules, defined the same way. It is easy to
 see, that $(\square^*)^*$ and $(\square^\circ)^\circ$ are naturally isomorphic to the identity functor.
-For some reasons, that will be clear later, for any $V\in \lmod\lieg$ we denote by $-V$ the left
-$\lieg$-module $(V^*)^\circ$.
 
 Another pair of very important functors are $\square \otimes_\cmpl \square \colon \rmod\lieg \times
 \lmod\lieg \to \lmod\lieg$ and $\Hom_\cmpl(\square, \square)\colon \lmod\lieg^{op} \times
@@ -63,7 +61,9 @@ For $V\in \lmod\lieg$ and $S \in \hat\lieg$, we will write $V_{S}$ for the $\lie
 If S is one-dimensional, it is fully determined by the character $\lambda \in (\lieg/[\lieg,
 \lieg])$ and in this case we will simply write $V_\lambda$ for it. For example, $\CC_\lambda$
 stands for one-dimensional module with action, given by $g\cdot s = \lambda(g)s$ for all $s\in
-\CC_\lambda$ and $g \in \lieg$.  
+\CC_\lambda$ and $g \in \lieg$. We will also use the notation $V_{-S}$ for the module $S^*
+\otimes_\CC$, which is motivated by the fact, that if $S$ is again one-dimensional with character
+$\lambda$, then $V_{-S}$ is isomorphic to $V_{-\lambda}$. 
 
 \subsection{Homology and cohomology of Lie algebras}
 In this paragraph we recall the definitions of Lie algebra cohomology, which can be found in any
@@ -71,15 +71,44 @@ related textbook \todo{ref weibel}.
 
 
 \begin{definition}
-    For $V\in \lmod\lieg$ and for all $i\in \ZZ_{\geq0}$ the homology functors are defined as 
+    For $V\in \lmod\lieg$ and for all $k\in \ZZ_{\geq0}$ the homology functors are defined as 
     \begin{equation}
-        H_i(\lieg, V) = \Tor_i^{U\lieg}(\cmpl, V),
+        H_k(\lieg, V) = \Tor_k^{U\lieg}(\cmpl, V),
     \end{equation}
     and, dually, the cohomology as
     \begin{equation}
-        H^i(\lieg, V) = \Ext^i_{U\lieg}(\CC, V).
+        H^k(\lieg, V) = \Ext^k_{U\lieg}(\CC, V).
     \end{equation}
 \end{definition}
 
-The homology can be computed using Chevalley-Eilenberg projective resolution of
-\todo{Chevalley-Eilenberg, Poincare duality, Tor(A, B)=Tor(C, AxB)}
+The homology can be computed using Chevalley-Eilenberg \todo{ref weibel, guichardet} free resolution of the trivial $\lieg$
+module $\cmpl$. It has $F_k=U\lieg\otimes_\cmpl \bigwedge^k \lieg$ in degree $k$ with the
+differential given by
+\begin{equation}
+    d(u\otimes g_1 \wedge \cdots \wedge g_p) 
+ = \sum_{i = 1}^p (-1)^{i+1} u g_i \otimes g_1 \wedge \cdots \wedge \hat{g}_i\wedge \cdots \wedge g_p  
++$$ $$+\sum_{i < j} (-1)^{i+j} u\otimes [g_i, g_j] \wedge \cdots \wedge \hat{g}_i\cdots \wedge
+\hat{g}_j\cdots \wedge g_p,~\text{where } u\in U\lieg,~g_i \in \lieg.
+\end{equation}
+The following fact about homology will be used in the text.
+\begin{theorem}
+   Let $V \in \rmod\lieg$ and $W \in \lmod\lieg$. Then  
+    \[
+        \Tor_k^{U\lieg}(V,W) \cong \Tor_k^{U\lieg}(\cmpl,V\otimes_\cmpl W) = H_k(\lieg, V\otimes_\cmpl W),
+    \]
+    for all $k\in \ZZ_{\geq 0}$.
+\end{theorem}
+\begin{proof}
+    Since functors $\CC\otimes_{U\lieg}(\square \otimes_\CC W)$ and $\square \otimes_{U\lieg} W$
+    are naturally isomorphic, it suffices to show, that if $P_\bullet \to V$ is a flat
+    resolution of $V$, then $P_\bullet \otimes_\CC W$ is a flat resolution of $V\otimes_\CC
+    W$.
+
+    By definition, flatness of $P_k$ means exactness of functor $P_k\otimes_{U\lieg}\square$. Using
+    properties of tensor product we obtain an isomorphism of functors $(P_k\otimes_\CC W) 
+    \otimes_{U\lieg} \square$ and $P_k\otimes_{U\lieg} (W \otimes_\CC \square)$. The latest fucntor
+    is the composition of exact functors, so it is also exact.
+
+    
+\end{proof}
+\todo{Poincare duality, Tor(A, B)=Tor(C, AxB)}
