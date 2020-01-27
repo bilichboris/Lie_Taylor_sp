@@ -6,12 +6,11 @@
 % 
 
 \subsection{Notation} 
-In the article all algebras, including Lie algebras, are complex. 
-For Lie algebra $\lieg$ we will use the notation $U\lieg$ to denote its enveloping algebra. We will
-denote by $\lmod{\lieg}$ and $\rmod\lieg$ the categories of left and right $\lieg$-modules respectively. 
-We write $\hat\lieg$ for the set of set of isomorphism classes of simple finite-dimensional
-$\lieg$-modules and $\cmpl$ for trivial bimodule. 
-For $\lieg$-module $V$ can be defined vector spaces 
+In the article all algebras, including Lie algebras, are complex.  For Lie algebra $\lieg$ we will
+use the notation $U\lieg$ to denote its enveloping algebra. We will denote by $\lmod{\lieg}$ and
+$\rmod\lieg$ the categories of left and right $\lieg$-modules respectively.  We write $\hat\lieg$
+for the set of set of isomorphism classes of simple finite-dimensional $\lieg$-modules and $\cmpl$
+for trivial bimodule.  For $\lieg$-module $V$ can be defined vector spaces 
 \begin{equation}
     V^\lieg = \{v\in V\colon g\cdot v = 0 ~ \forall g\in \lieg \}, 
 \end{equation}
@@ -19,15 +18,16 @@ called invariants and
 \begin{equation}
     V_\lieg = V/gV,
 \end{equation}
-called coinvariants. It is known \todo{ref}, that $\square^\lieg$ and $\square_\lieg$ are actually functors
-from $\lmod\lieg$ (or $\rmod\lieg$) to the category of vector spaces over $\CC$, isomorphic to
-$\Hom_\lieg(\CC, V)$ and $\CC \otimes_{U\lieg} V$ respectively. 
+called coinvariants. It is known \todo{ref}, that $\square^\lieg$ and $\square_\lieg$ are actually
+functors from $\lmod\lieg$ (or $\rmod\lieg$) to the category of vector spaces over $\CC$,
+isomorphic to $\Hom_\lieg(\CC, V)$ and $\CC \otimes_{U\lieg} V$ respectively. 
 
 \subsection{Functors between categories of modules}
 For the rest of this section we will denote by $\lieg$ an arbitary finite-dimensional Lie algebra.
-We define two functors $\square^*\colon \lmod{\lieg}^{op} \to \rmod{\lieg}$ and $\square^\circ\colon
-\lmod{\lieg} \to \rmod{\lieg}$ as follows. The first $\square^*$, called duality functor, sends 
-$\lieg$-module V to it's dual vector space, on which the right action of $\lieg$ is defined as 
+We define two functors $\square^*\colon \lmod{\lieg}^{op} \to \rmod{\lieg}$ and
+$\square^\circ\colon \lmod{\lieg} \to \rmod{\lieg}$ as follows. The first $\square^*$, called
+duality functor, sends $\lieg$-module V to it's dual vector space, on which the right action of
+$\lieg$ is defined as 
 \[
     (f\cdot g) (v) = f(g\cdot v),~\text{ for all } f\in V^*,~v \in V,~g\in\lieg.
 \]
@@ -38,14 +38,14 @@ action
 \]
 These two functors define equivallence of categories $\lmod\lieg$, $\rmod\lieg$, $\lmod\lieg^{op}$
 and $\rmod\lieg^{op}$. We will also denote by $\square^*$ and $\square^\circ$ functors from
-category of right $\lieg$-modules to left $\lieg$-modules, defined the same way. It is easy to
-see, that $(\square^*)^*$ and $(\square^\circ)^\circ$ are naturally isomorphic to the identity functor.
+category of right $\lieg$-modules to left $\lieg$-modules, defined the same way. It is easy to see,
+that $(\square^*)^*$ and $(\square^\circ)^\circ$ are naturally isomorphic to the identity functor.
 
 Another pair of very important functors are $\square \otimes_\cmpl \square \colon \rmod\lieg \times
 \lmod\lieg \to \lmod\lieg$ and $\Hom_\cmpl(\square, \square)\colon \lmod\lieg^{op} \times
 \lmod\lieg \to \lmod\lieg$. If $V \in \rmod\lieg$ and $W \in \lmod\lieg$, then $V \otimes_\cmpl W$
-is the tensor product of $V$ and $W$ as vector space with action of $\lieg$, fully determined by the
-formula
+is the tensor product of $V$ and $W$ as vector space with action of $\lieg$, fully determined by
+the formula
 \[
     g\cdot v\otimes w = v\otimes (g\cdot w) - (v\cdot g) \otimes w, \text{ for all } w\in W,~v\in
     V,~ g\in \lieg 
@@ -57,13 +57,13 @@ The Hom functor is defined as
 For $V, W \in \lmod\lieg$ (resp. $\rmod\lieg$), we will denote by $V\otimes W$ left $\lieg$-module
 $V^\circ \otimes_\CC W$ (resp. $V \otimes_\CC W^\circ$).
 
-For $V\in \lmod\lieg$ and $S \in \hat\lieg$, we will write $V_{S}$ for the $\lieg$-module $S\otimes_\CC V$. 
-If S is one-dimensional, it is fully determined by the character $\lambda \in (\lieg/[\lieg,
-\lieg])$ and in this case we will simply write $V_\lambda$ for it. For example, $\CC_\lambda$
-stands for one-dimensional module with action, given by $g\cdot s = \lambda(g)s$ for all $s\in
-\CC_\lambda$ and $g \in \lieg$. We will also use the notation $V_{-S}$ for the module $S^*
-\otimes_\CC V$, which is motivated by the fact, that if $S$ is again one-dimensional with character
-$\lambda$, then $V_{-S}$ is isomorphic to $V_{-\lambda}$. 
+For $V\in \lmod\lieg$ and $S \in \hat\lieg$, we will write $V_{S}$ for the $\lieg$-module
+$S\otimes_\CC V$.  If S is one-dimensional, it is fully determined by the character $\lambda \in
+(\lieg/[\lieg, \lieg])$ and in this case we will simply write $V_\lambda$ for it. For example,
+$\CC_\lambda$ stands for one-dimensional module with action, given by $g\cdot s = \lambda(g)s$ for
+all $s\in \CC_\lambda$ and $g \in \lieg$. We will also use the notation $V_{-S}$ for the module
+$S^* \otimes_\CC V$, which is motivated by the fact, that if $S$ is again one-dimensional with
+character $\lambda$, then $V_{-S}$ is isomorphic to $V_{-\lambda}$. 
 
 \subsection{Homology and cohomology of Lie algebras}
 In this paragraph we recall the definitions of Lie algebra cohomology, which can be found in any
@@ -81,9 +81,9 @@ related textbook \todo{ref weibel}.
     \end{equation}
 \end{definition}
 
-The homology can be computed using Chevalley-Eilenberg \todo{ref weibel, guichardet} free resolution of the trivial $\lieg$
-module $\cmpl$. It has $F_k=U\lieg\otimes_\cmpl \bigwedge^k \lieg$ in degree $k$ with the
-differential given by
+The homology can be computed using Chevalley-Eilenberg \todo{ref weibel, guichardet} free
+resolution of the trivial $\lieg$ module $\cmpl$. It has $F_k=U\lieg\otimes_\cmpl \bigwedge^k
+\lieg$ in degree $k$ with the differential given by
 \begin{equation}
     d(u\otimes g_1 \wedge \cdots \wedge g_p) 
  = \sum_{i = 1}^p (-1)^{i+1} u g_i \otimes g_1 \wedge \cdots \wedge \hat{g}_i\wedge \cdots \wedge g_p  
@@ -100,19 +100,18 @@ The following fact about homology will be used in the text.
 \end{lemma}
 \begin{proof}
     Since functors $\CC\otimes_{U\lieg}(\square \otimes_\CC W)$ and $\square \otimes_{U\lieg} W$
-    are naturally isomorphic, it suffices to show, that if $P_\bullet \to V$ is a flat
-    resolution of $V$, then $P_\bullet \otimes_\CC W$ is a flat resolution of $V\otimes_\CC
-    W$.
+    are naturally isomorphic, it suffices to show, that if $P_\bullet \to V$ is a flat resolution
+    of $V$, then $P_\bullet \otimes_\CC W$ is a flat resolution of $V\otimes_\CC W$.
 
     By definition, flatness of $P_k$ means exactness of functor $P_k\otimes_{U\lieg}\square$. Using
-    properties of tensor product we obtain an isomorphism of functors $(P_k\otimes_\CC W) 
+    properties of tensor product we obtain an isomorphism of functors $(P_k\otimes_\CC W)
     \otimes_{U\lieg} \square$ and $P_k\otimes_{U\lieg} (W \otimes_\CC \square)$. The last functor
     is the composition of exact functors, so it is also exact, hence $P_k\otimes_\CC W$ is flat.
 \end{proof}
 
 A useful variation of Poincare duality holds for finite dimensional Lie algebras. Let $n = \dim
-\lieg$. We endow one-dimensional vector space $\bigwedge^n \lieg$ 
-with structure of left $\lieg$-module, which extends adjoint action by Leibnitz rule. 
+\lieg$. We endow one-dimensional vector space $\bigwedge^n \lieg$ with structure of left
+$\lieg$-module, which extends adjoint action by Leibnitz rule. 
 
 \begin{theorem}[Poincare duality] \label{t:poincare}
     For $0 \leq k \leq n$ and any left $\lieg$-module $V$, there are vector space isomorphism 
