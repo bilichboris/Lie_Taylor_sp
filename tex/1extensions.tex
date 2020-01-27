@@ -1,11 +1,37 @@
 In this section we provide a tool for computing spectrum of some modules by induction.
 
+\subsection{Extensions of Lie algebras}
 Let $\lieh$ be an arbitary Lie algebra. By one-dimensional extension of $\lieh$ we call the exact
 sequence of Lie algebras
 \[
     0 \to \CC_\lambda\rightarrow \lieg \xrightarrow\pi \lieh \to 0,
 \]
 where $\CC_\lambda$ is one-dimensional $\lieh$-module, such the commutator in $\lieg$ is given by
-$[g,c] = \lambda(\pi(g))c$ for all $g in \lieg$ and $c \in \CC_\lambda$.  The fundamental result of
+$[g,c] = \lambda(\pi(g))c$ for all $g \in \lieg$ and $c \in \CC_\lambda$.  The fundamental result of
 Lie algebra cohomology theory states, that isomorphism classes of such extensions are in one-to-one
-correspondence with the set $H^2(\lieg,\CC_\lambda) = \Ext^2_{U\lieh}(\cmpl, \cmpl_\lambda)$.
+correspondence with the set $H^2(\lieg,\CC_\lambda) = \Ext^2_{U\lieh}(\cmpl, \cmpl_\lambda)$. Let
+us recall how to construct the bijection. Let $\xi \in Hom_\CC(\bigwedge^2\lieg, \CC_\lambda)$ be a
+cocycle. We define Lie bracket on the vector space $\lieg = \CC_\lambda \oplus \lieh$ by 
+\[
+    [(h_1, v_1), (h_2, v_2)]_\xi= ([h_1, h_2], \lambda(h_1) v_2 - \lambda(h_2) v_1 +
+    \xi(h_1\wedge h_2)), 
+\]
+for all $h_i \in \lieh,~c_i\in \CC_\lambda$. Jacobi identity is obtained from definition of cocycle
+and it can be shown, that cohomologous cocycles induce isomorphic extensions (comp. \todo{ref
+weibel}).
+
+From now and till the end of the paragraph, we write $\lieg$ for one-dimensional extension of
+$\lieh$, represented by cocycle $\xi \in Hom_\CC(\bigwedge^2\lieg, \CC_\lambda)$. Note, that if $S \in
+\hat\lieh$ -- ireducible $\lieh$-module, than $S^\pi$ is also irreducible as $\lieg$-module, thus
+we will identify $\hat\lieh$ with subset of $\hat\lieg$. Assume that we
+have a $\lieh$-module $V$, and we want to compute it's spectrum $\sigma_\lieg (V^\pi)$, here
+$V^\pi$ is $V$ considered as $\lieg$-module via the homomorphism $\pi$. The following Theorem gives
+us some approximations for the desired result.
+\begin{theorem}
+    Let $\lieh$, $\lieg$ and $V$ be as above. The
+    \begin{enumerate}
+        \item $\sigma_\lieg(V^\pi) \subset \hat\lieh \subset \hat\lieg$
+
+        \item \todo{finishit}
+    \end{enumerate}
+\end{theorem}
