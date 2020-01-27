@@ -26,13 +26,23 @@ Let us provide several equivalent definitions, in order to use later.
 \end{theorem}
 \begin{proof}
     \begin{itemize}
-        \item[$1 \Rightarrow 2$]
+        \item[$1 \Leftrightarrow 2$]
             This follows immediatly from Lemma \ref{t:torhomology}.
 
-        \item[$2 \Rightarrow 3$]
+        \item[$2 \Leftrightarrow 3$]
             Poincare duality (Theorem \ref{t:poincare}).
 
-        \item[$3 \Rightarrow 4$] \todo{finish proof}
-
+        \item[$3 \Leftrightarrow 4$]
+            Again, by Poincare duality we have
+            \[
+                H^k(\lieg, \bigwedge^n\lieg \otimes_\CC V_{-S})^* = H^{n - k} (\lieg, V_{-S}^*).
+            \]
+            First observe that $V^*_{-S}$ is isomorphic to $\bigwedge^n\lieg \otimes_{\CC}
+            V^*_{-S^* \otimes_\CC \bigwedge^n\lieg}$. Using the equivalence of the 1'st and the
+            3'rd statements we obtain the desired result. 
     \end{itemize}
+
+    In case of abelian Lie algebra $\lieg$ the set $\hat\lieg$, due to the Lie's Theorem, 
+    can be identified with the space of characters $\lieg^*$. \todo{prove that definitions
+    coincide}
 \end{proof}
