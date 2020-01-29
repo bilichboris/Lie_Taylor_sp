@@ -1,1 +1,50 @@
-In this section $\lieg$ denotes finite-dimensional semisimple Lie algebra. 
+In this section $\lieg$ denotes semisimple Lie algebra of dimension $n$. Note, that $\bigwedge^n
+\lieg$ is isomorphic to trivial $\lieg$-module, therefore, by Lemma \ref{l:definitions}, the Taylor
+spectrum of $\lieg$-module $V$ can be described as the set
+\[
+    \sigma_\lieg(V) = \{ S \in \hat\lieg \colon H^k(\lieg, V_{-S})\neq 0 \text{ for some } k\}.
+\]
+Let us recall the Theorem 7.8.9 from \todo{ref weibel}, that we will need to describe the spectrum
+of $\lieg$-modules.
+\begin{theorem} \label{t:cohomologyofsemisimple}
+If $S$ is a simple $\lieg$-module, $S \neq \cmpl$, then 
+\[
+    H^k(\lieg, S) = 0 \text{ for all } k.
+\]
+\end{theorem}
+If the module is trivial, then, obviously, $H^k(\lieg, \CC) \cong \CC$. Now we are ready to proove
+the main result of the section.
+\begin{theorem} \label{t:ssspectrumissubmodules}
+    For any finite-dimensional $\lieg$ module $V$, its Taylor spectrum coincides with the set of
+    simple components of $V$. Moreover the dimension $H^k(\lieg, V_{-S})$ is the number of copies
+    of $S$ in the decomposition of $V$.
+\end{theorem}
+\begin{proof}
+    As the cohomology commute with finite sums it suffices to show, that the assertion of Theorem holds for
+    simple $V$. By Theorem \ref{t:cohomologyofsemisimple}, we only need to show that $\CC$ occurs
+    in decomposition of $V_{-S}$ if and only if $V\cong S$. But $V_{-S}$ is $\Hom_\CC(S, V)$ and
+    $(V_{-S})^\lieg$ is $\Hom_\lieg(S, V)$, so it is one-dimensional if $S\cong V$ and zero
+    otherwise.
+\end{proof}
+In fact, the statement of the above theorem holds even for Banach $\lieg$-modules. In order to
+prove this, we need the following fact, which can be found in the book \todo{red beltita}.
+
+\begin{theorem}
+    Any Banach module $V$ over semisimple Lie algebra $\lieg$ is the union of its
+    finite-dimensional submodules. 
+\end{theorem}
+\begin{proof}
+    Corollary 5 in \S30 of \todo{ref beltita}.
+\end{proof}
+In other words, $V$ is the colimit of the filtered diagram $\mathfrak{V}$ of its finite-dimensional submodules
+with inclusions as morphisms. Recall, that homology and the tensor product commute with filtered
+colimits. Thus, we can strengthen the Theorem \ref{t:ssspectrumissubmodules}.
+\begin{corollary}
+    For any Banach $\lieg$ module $V$, its Taylor spectrum coincides with the set of
+    simple submodules of $V$. 
+\end{corollary}
+\begin{proof}
+    As all the maps in $\mathfrak{V}$ are inclusions, so do maps in $H_*(\lieg, \mathfrak{V}_{-S})$,
+    hence $H_*(\lieg, V_{-S})$ is nonzero if and only if $S \in \sigma(W)$ for some $W\in
+    \mathfrak{V}$.
+\end{proof}
