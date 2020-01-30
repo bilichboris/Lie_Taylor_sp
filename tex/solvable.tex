@@ -1,4 +1,70 @@
-In this section $\lieg$ will denote an arbitary solvable Lie algebra of dimension $n$. In this
-case, computing Taylor spectrum is a hard job even for the trivial module $\CC$. For a
-$\lieg$-module $V$ we call the set of weights. Consider the
-adjoint representation $\ad\lieg \in \lmod\lieg$.
+\subsection{The spectrum of the trivial module}
+In this section $\lieg$ will denote an arbitary solvable Lie algebra of dimension $n$. Due to Lie's
+theorem, every simple $\lieg$-module is one-dimensional, so we will identify $\hat\lieg$ with the
+space of characters $(\lieg/[\lieg,\lieg])^*$. In this case, computing Taylor spectrum is a hard
+job even for the trivial module $\CC$. For a finite-dimensional $\lieg$-module $V$ by the set of
+weights $\omega(V) \subset \hat\lieg$ we mean the set of diagonal matrix entries in triangular
+basis for $V$. It is independant on the choice of upper triangular basis and can be also described
+as the set of one-dimensional subfactors of $V$. Consider the adjoint representation $\ad\lieg \in
+\lmod\lieg$. The set of weights $\omega(\ad\lieg)$ is called Jordan-H{\"o}lder values of $\lieg$.
+We denote by $2\rho$ the sum of all Jordan-H{\"o}lder values with multiplicites. It is exactly the
+weight of the module $\bigwedge^n\lieg$, defined in section \ref{sec:preliminaries}.  The following
+restriction on possible elements in the spectrum of the trivial module holds.
+\begin{theorem} \label{t:jordanholder}
+    For any solvable Lie algebra $\lieg$ of dimension $n$, if $\lambda \in \hat\lieg$ is in the
+    spectrum $\sigma_\lieg(\CC)$, then it is the sum of at most $n$ Jordan-H{\"o}lder values of
+    $\lieg$. Moreover, if $\lambda \in \sigma_\lieg(\CC)$, then $2\rho - \lambda$ is also in
+    $\sigma_\lieg(\CC)$.
+\end{theorem}
+\begin{proof}
+    The proof is by induction on $n$. Assertion of the Theorem, obviously, holds for
+    one-dimensional Lie Algebra, so we have $n=1$ as the base of induction. Assume, that it holds
+    for all solvable Lie algebras of dimension $n-1$. Choose any one-dimensional ideal
+    $\mathfrak{c}$ in $\lieg$ and denote the corresponding character by $\mu$. By the third
+    statement of the Theorem \ref{t:1ext} we know, that the spectrum $\sigma_\lieg(\CC)$ lies in
+    the set $\{0, \mu\} + \sigma_{\lieg/\mathfrak{e}}(\CC)$. By induction, any $\nu \in
+    \sigma_{\lieg/\mathfrak{e}}(\CC)$ is the sum of at most $n-1$ Jordan-H{\"o}lder values of
+    $\lieg/\mathfrak{e}$, which are also Jordan-H{\"o}lder values of $\lieg$. This is the desired
+    conclusion.
+
+    For the second assertion we use Lemma \ref{l:definitions}. The trivial module is isomorphic to
+    its dual, so if $\CC_\lambda$ is in the spectrum of $\CC$, then $\CC_\lambda^* \otimes
+    \bigwedge^n\lieg \cong_\CC \CC_{2\rho - \lambda}$ is also in the spectrum.
+\end{proof}
+Obviously, $0$ is always in the spectrum and, hence, so is $2\rho$. So, generally, there are often
+more than one element in the spectrum of $\CC$. Nevertheless, for some good classes of solvable Lie
+algebras the situation is more clear, than in general case. One of such classes is nilpotent Lie
+algebras.
+
+\subsection{The spectrum of finite-dimensional modules over nilpotent Lie algebras}
+The following well-known fact in representation theory for nilpotent Lie algebras plays major role
+in this paragraph.
+\begin{lemma} \label{l:nilpdecomp}
+    For $V$ -- finite-dimensional indecomposable module over nilpotent Lie algebra $\lieg$,
+    $\omega(V)$ consists of one element.
+\end{lemma}
+\begin{proof}
+    Proposition 9 in chapter VII of \todo{ref bourbaki}
+\end{proof}
+We call modules with only one weight monoweighted. The last Lemma show us, that any
+finite-dimensional module over nilpotent Lie algebra can be decomposed in sum of monoweighted
+submodules.  Now we are ready to formulate the main result.
+\begin{theorem}
+    Let $\lieg$ be a nilpotent Lie algebra and $V$ -- finite-dimensional $\lieg$-module. Then the
+    spectrum $\sigma(V)$ coincides with the set of weights $\omega(V)$.
+\end{theorem}
+\begin{proof}
+    As in the proof of \ref{t:ssspectrumissubmodules} we may assume $V$ is monoweighted. The
+    spectrum of module $V_{\lambda}$ is $\sigma(V) + \lambda$, so we may additionally assume, that
+    $\omega(V) = \{0\}$. Observe, that by Engel's theorem, all Jordan-H{\"o}lder values of $\lieg$
+    are zero, so by Theorem \ref{t:jordanholder}, we conclude that the assertion holds for trivial
+    $V$. We now proceed by induction on $m = \dim V$. Choose some one-dimensional submodule in $V$.
+    We have a short exact sequence
+    \[
+        0\to \CC \to V \to V/\CC \to 0.
+    \]
+    It follows easily from long exact sequence of cohomolohgies, that $\sigma(V) \subset
+    \sigma(\CC) \cup \sigma(V/\CC)$ and the latest is equal $\{0\}$ by induction. On the other hand
+    $0$ is in the spectrum of $V$, because $H_0(\lieg, V) = V_\lieg \neq 0$. This finishes the
+    proof.
+\end{proof}

@@ -1,5 +1,5 @@
 \RequirePackage[l2tabu, orthodox]{nag}
-\documentclass[letterpaper]{amsproc}
+\documentclass[letterpaper]{amsart}
 
 \usepackage[utf8]{inputenc}
 %\usepackage[T2A]{fontenc}
@@ -13,6 +13,8 @@
 
 %\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 \author{Bilich Boris}
+\address{Department of mathematics, HSE university, Moscow}
+\email{bibilich@edu.hse.ru}
 \title{Taylor spectrum}
 
 \usepackage{todonotes}
@@ -39,9 +41,13 @@
 \newcommand{\lmod}[1]{\operatorname{\mathbf{#1-mod}}}
 \newcommand{\rmod}[1]{\operatorname{\mathbf{mod-#1}}}
 
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{2}
+
 
 \begin{document}
 \maketitle
+\tableofcontents
 \section{Introduction}%
 \label{sec:introduction}
 \input{introduction.tex}
@@ -66,9 +72,9 @@
 \label{sec:solvable}
 \input{solvable.tex}
 
-\section{Case of nilpotent Lie algebras}
-\label{sec:nilpotent}
-\input{nilpotent.tex}
+%\section{Case of nilpotent Lie algebras}
+%\label{sec:nilpotent}
+%\input{nilpotent.tex}
 
 \section{Case of borel subalgebra of semisimple Lie algebra}
 \label{sec:borel}
