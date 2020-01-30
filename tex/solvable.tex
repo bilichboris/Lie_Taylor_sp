@@ -63,8 +63,67 @@ submodules.  Now we are ready to formulate the main result.
     \[
         0\to \CC \to V \to V/\CC \to 0.
     \]
-    It follows easily from long exact sequence of cohomolohgies, that $\sigma(V) \subset
+    It follows easily from long exact sequence of cohomologies, that $\sigma(V) \subset
     \sigma(\CC) \cup \sigma(V/\CC)$ and the latest is equal $\{0\}$ by induction. On the other hand
     $0$ is in the spectrum of $V$, because $H_0(\lieg, V) = V_\lieg \neq 0$. This finishes the
     proof.
 \end{proof}
+
+\subsection{Case of borel subalgebras of semisimple Lie algebras}
+%Пусть $\lies$ -- полупростая алгебра Ли и $\lieg$ -- некоторая её борелевская подалгебра. Известно, что $\lieg = \lieh \ltimes \lien$, где $\lieh$ -- картановская подалгебра $\lies$, а $\lien = [\lieg, \lieg]$. Введем обозначение $\Delta, \Delta^+ \subset \lieh^* = \lieg^*$ для системы корней относительно $\lieh$ и множества положительных корней относительно $\lieg$ соответственно. В терминах спектра Тейлора $\Delta = \sigma_h(\lies)$ и $\Delta^+ = \sigma_h(\lien)$ (так как $\lieh$ -- абелева, то это просто множество совместных собственных значений). За $W$ обозначим группу Вейля относительно $\Delta^+$. Для каждого элемента $w\in W$ определена его длина $0 \leq l(w) \leq \dim \lien$
+
+%Нашей задачей является описание спектра Тейлора тривиального модуля алгебры Ли $\lieg$. Заметим, что эта задача эквивалентна следующей: для каких одномерных $\lieg$-модулей $\cmpl_\lambda$ его гомологии $H^{\mathrm{Lie}}_{\bullet}(\lieg, \cmpl_\lambda)$ не зануляются? Далее мы приведем полное решение этой задачи, более того мы получим явный вид соответсвующих гомологий. 
+Let $\lies$ be a semisimple Lie algeba and $\lieg$ its Borel subalgebra. It is known\todo{ref
+humphreys}, that $\lieg$ is isomorphic to semidirect product $\lieh \ltimes \lien$, where $\lieh$ is
+a Cartan subalgebra of $\lies$ and $\lien = [\lieg, \lieg]$. By $\Delta \subset \lieh^* =
+\hat\lieg$ we will denote the root system of $\lies$ relative to $\lieh$ and $\lieg$. We write
+$\Delta^+ \subset \Delta$ for denote the subset of positive roots. In fact, elements of $\Delta^+$
+are nonzero Jordan-H\"older values of $\lieg$. Let $W(\Delta)$ denote the Weil group. For any
+element $w\in W$ its length is denoted by $l(w)$. 
+
+The aim of the paragraph is to describe the spectrum of irreducible $\lies$ modules, regarded
+as $\lieg$ modules. The plan is to compute relveant cohomologies of $\lien$ and then take advantage
+of the Hochshild-Serre spectral sequence. Fortunately, these two steps were alredy done by
+different authors and we need only to glue them together. The first one is Kostant Theorem.
+\begin{theorem}[Kostant]
+   Let $V$ be irreducible representation of semisiple Lie algebra $\lies$ with highest weight
+   $\lambda$, relative to borel subalgebra $\lieg = \lieh \ltimes \lien$. Then, as $\lieh$-module,
+   $H^k(\lien, V)$ is the sum of one-dimensional modules of weights
+   \[
+       w(\lambda + \rho) - \rho,~\in W(\Delta), ~l(w) = k,
+   \]
+   where $\rho$ is half-sum of positive roots (or, equivalently, Jordan-H\"older values).
+\end{theorem}
+\begin{proof}
+    Theorem 6.12 in \todo{cite knapp} 
+\end{proof}
+We say, that an abelian Lie algebra $\lieh$ acts torally on $\lieh$-module $W$ if $W$ is direct sum
+of one-dimensional submodules. When $\lieh$ is a Cartan subalgebra of semisiple Lie algebra
+$\lies$, $\lieh$ acts torally on any finite dimensional $\lies$-module. If $\lieg = \lieh \ltimes
+\lien$ -- the Borel subalgebra of $\lies$, then $\lieh$ also acts torally on $\lien$. The following
+Theorem guarantees convergence of the Hochsild-Serre spectral sequence in the special case of
+semidirect products.
+\begin{theorem}
+    Let $\lieg=\lieh\ltimes\lien$ be a semidirect product where $\lieh$ is abelian and acts torally
+    both on $\lieg$ and a $\lieg$-module $V$. Then with respect to the weighting induced by the
+    action of $\lieh$ we have 
+    \begin{equation} \label{t:coll:1}
+        H^k(\lieg, V) = \bigoplus_{p + q = k} \bigwedge^p\lieh^* \otimes_\CC H^q(\lien, V)^\lieh
+    \end{equation} 
+\end{theorem}
+\begin{proof}
+    Theorem 4 in \todo{ref coll} 
+\end{proof}
+
+Let $\mu \in \lieh^*$ a weight. For any $\lieg$-module $V$, one may observe, that $H^k(\lien,
+V_{-\mu}) \cong H^k(\lien, V)_{-\mu}$ for all $k$. Hence, if $V$ is irreducible $\lies$-module of
+highest weight $\lambda$, then $H^q(\lien, V)$ from \ref{t:coll:1} is nonzero for some $q$ if and only if $\mu =
+w(\lambda + \rho) - \rho$. Combining it with Lemma $\ref{l:definitions}$ we obtain the main result.
+\begin{theorem}
+   For an irreducible module $V$ of highest weight $\lambda$ over the semisimple Lie algebra
+   $\lies$, the Taylor spectrum of $V$, regarded as the module over Borel subalgebra $\lieg \subset
+   \lies$ has the form 
+   \[
+       \sigma_\lieg(V) = \{ \rho + w(\lambda + \rho)\colon w \in W(\Delta)\}
+   \]
+\end{theorem}
