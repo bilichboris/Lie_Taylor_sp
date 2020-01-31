@@ -29,10 +29,10 @@ Let us provide several equivalent definitions, in order to use later.
             This follows immediatly from Lemma \ref{t:torhomology}.
 
         \item[$2 \Leftrightarrow 3$]
-            Poincare duality (Theorem \ref{t:poincare}).
+            Poincar\'e duality (Theorem \ref{t:poincare}).
 
         \item[$3 \Leftrightarrow 4$]
-            Again, by Poincare duality we have
+            Again, by Poincar\'e duality we have
             \[
                 H^k(\lieg, \bigwedge^n\lieg \otimes_\CC V_{-S})^* = H^{n - k} (\lieg, V_{-S}^*).
             \]
@@ -41,5 +41,11 @@ Let us provide several equivalent definitions, in order to use later.
             3'rd statements we obtain the desired result. 
     \end{itemize}
 \end{proof}
-    In case of abelian Lie algebra $\lieg$ the set $\hat\lieg$, due to the Lie's Theorem, can be
-    identified with the space of characters $\lieg^*$. \todo{prove that definitions coincide}
+    In case of solvable Lie algebra $\lieg$ the set $\hat\lieg$, due to the Lie's Theorem, can be
+    identified with the space of characters $(\lieg/[\lieg, \lieg])^*$. If $V$ is left
+    $\lieg$-module, then the defined spectrum has the following relation, with the spectrum, given
+    in (\ref{e:boassolarotonda}):
+    \[
+        \sigma_\lieg(V) = -\sigma^{BL}_\lieg(V^\circ),
+    \]
+    so we may think about $\sigma_\lieg$ as a generilization of $\sigma^{BL}_\lieg$.

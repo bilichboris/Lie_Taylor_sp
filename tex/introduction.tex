@@ -1,0 +1,37 @@
+In 1970, J. Taylor\cite{Taylor1970} introduced the notion of the joint spectrum for a finite tuple
+of commuting operators $T = (T_1,...,T_n)$, acting on a Banach space $V$. It was defined as a
+subset of $\CC^n$ (where $n$ is number of operators), which consists of such elements
+$(\lambda_1,...,\lambda_n)$, that the Koszul complex for algebra $\mathcal{B}(V)$ of bounded
+operators and elements $T_1 - \lambda_1,...,T_n - \lambda_n$ is not exact. For one operator, the
+Taylor spectrum coincides with the classical one. In the same year, Taylor estabilished the
+existence of the holomorphic functional calculus in the neighbourhood of the spectrum
+\cite{Taylor1970b}. Two years later, he proposed a framework for noncommutative functional
+calculus\cite{Taylor1972}, but the notion of spectrum for non-commuting tuples of operators was not
+yet developed. 
+
+The step in this direction was made by A.S. Fainshtein in his work \cite{Fainshtein}, where he
+generalized the Taylor spectrum to tuples of operators, generating nilpotent Lie algebra $\lieg$.
+This definiton was soon improved by E. Boasso and A. Larotonda \cite{boasso} to fit also for solvable Lie
+algebras. Let us recall the definiton, given by them.
+\begin{definition}
+    Let $\lieg$ be a solvable Lie algebra, and $V$ be a right $\lieg$-module. The Taylor spectrum
+    of $V$ is the subset of the space of characters $(\lieg/[\lieg,\lieg])^*$ of the form
+    \begin{equation} \label{e:boassolarotonda}
+        \sigma^{BL}_\lieg(V) = \{ \lambda \in (\lieg/[\lieg,\lieg])^*\colon \Tor^{U\lieg}_k(V,
+            \CC_\lambda)\neq 0 \text{ for some } k \in \ZZ_{\geq0}\},
+    \end{equation}
+    where $\CC_\lambda$ denotes a one-dimensional $\lieg$-module, on which $\lieg$ acts by
+    multiplication on $\lambda$.
+\end{definition}
+Further researches showed, that the spectrum has several nice properties, such as projection
+property and different variations of the spectral mapping theorem. The details can be found in the
+monograph \cite{beltita} and in series of papers by A. Dosi (see for example
+\cite{Dosi1}\cite{Dosi2}\cite{Dosi3}). In 2010, A.Dosi proved, that for a special class of Banach
+modules over nilpotent Lie algebra, there exists some sort of noncommutative holomorphic functional
+calculus \cite{Dosi4}.
+
+In this paper, we introduce the notion of the Taylor joint spectrum for modules over an
+arbitary finite-dimensional Lie algebra $\lieg$ and study it for, mostly, finite-dimensional
+modules. Our main results are Theorems \ref{t:ssspectrumissubmodules}, \ref{t:nilpspectrum} and
+\ref{t:borelspectrum} in which we describe the spectrum for semisimple, nilpotent and Borel
+subalgebras respectively.   

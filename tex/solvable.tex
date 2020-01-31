@@ -31,8 +31,21 @@ restriction on possible elements in the spectrum of the trivial module holds.
     its dual, so if $\CC_\lambda$ is in the spectrum of $\CC$, then $\CC_\lambda^* \otimes
     \bigwedge^n\lieg \cong_\CC \CC_{2\rho - \lambda}$ is also in the spectrum.
 \end{proof}
-Obviously, $0$ is always in the spectrum and, hence, so is $2\rho$. So, generally, there is often
-more than one element in the spectrum of $\CC$. Nevertheless, for some nice classes of solvable Lie
+The first part of the theorem was originally obtained by S. Wadsley in the converstion on the
+mathoverflow website.  
+
+Obviously, $0$ is always in the spectrum and, hence, so is $2\rho$. So,
+generally, there is often more than one element in the spectrum of $\CC$. 
+\begin{example}
+   Let $\lieg$ be a 3-dimensional solvable Lie algebra with basis $e_1, e_2, e_3$ and the
+   commutator, given by $[e_1, e_2] = e_2$ and $[e_1, e_3] = \lambda e_3$ for some $\lambda \in
+   \CC$. The space of characters is one dimensional, so we identify it with $\CC$ by evaluation on
+   $e_1$. Then $\sigma_\lieg(\CC) = \{0,1,\lambda, 1 + \lambda\}$. Indeed, $0$ and $2\rho = 1 +
+   \lambda$ is always in the spectrum, and for $1$ and $\lambda$ the first homology groups are
+   non-vanishing.
+\end{example}
+
+Nevertheless, for some nice classes of solvable Lie
 algebras the situation is more clear, than in general case. One of such classes is nilpotent Lie
 algebras.
 
@@ -49,7 +62,7 @@ in this paragraph.
 We call modules with only one weight monoweighted. The last Lemma show us, that any
 finite-dimensional module over nilpotent Lie algebra can be decomposed in the sum of monoweighted
 submodules.  Now we are ready to formulate the main result.
-\begin{theorem}
+\begin{theorem} \label{t:nilpspectrum}
     Let $\lieg$ be a nilpotent Lie algebra and $V$ -- finite-dimensional $\lieg$-module. Then the
     spectrum $\sigma(V)$ coincides with the set of weights $\omega(V)$.
 \end{theorem}
@@ -120,7 +133,7 @@ V_{-\mu}) \cong H^k(\lien, V)_{-\mu}$ for all $k$. Hence, if $V$ is irreducible 
 highest weight $\lambda$, then $H^q(\lien, V_{-\mu})^\lieh$ from (\ref{t:coll:1}) is nonzero for
 some $q$ if and only if $\mu = w(\lambda + \rho) - \rho$. Combining it with Lemma
 $\ref{l:definitions}$ we obtain the main result.
-\begin{theorem}
+\begin{theorem} \label{t:borelspectrum}
    For an irreducible module $V$ of highest weight $\lambda$ over the semisimple Lie algebra
    $\lies$, the Taylor spectrum of $V$, regarded as the module over Borel subalgebra $\lieg \subset
    \lies$ has the form 
