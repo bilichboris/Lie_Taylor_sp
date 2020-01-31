@@ -16,11 +16,21 @@ style=alphabetic
 ]{biblatex}
 \addbibresource{bibliography.bib}
 
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=blue,
+    filecolor=green,
+    linkcolor=darkgray,
+    urlcolor=gray
+}
+
 %\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 \author{Bilich Boris}
-\address{Department of mathematics, HSE university, Moscow}
+\address{Department of Mathematics, National Research University "Higher School of Economics",
+Moscow, Russian Federation}
 \email{bibilich@edu.hse.ru}
-\title{Taylor spectrum}
+\title{Taylor spectrum for modules over Lie algebra}
 
 \usepackage{todonotes}
 
@@ -54,6 +64,24 @@ style=alphabetic
 
 \begin{document}
 \maketitle
+
+\begin{abstract}
+    J. Taylor \cite{Taylor1970} introduced the notion of the joint spectrum of several commuting
+    operators in Banach space and proved the existence of the holomorphic functional calculus in
+    the neighbourhood of the spectrum. The natural question was, if it is possible to generalise
+    the spectrum for tuples of not necceserily commuting operators. A.S. Fainshtein extended the
+    notion of the Taylor spectrum to the tuples of operators, generating nilpotent Lie algebra. A
+    bit further, E. Boasso and A. Larotonda defined it for solvable Lie algebras and proved the
+    projection property. In 2010, A. Dosi proved a version of noncommutative holomorphic functional
+    calculus for nilpotent Lie algebras.
+    
+    In the paper we generilise the notion of Taylor spectrum to modules over an arbitary Lie
+    algebra and study it for finite-dimensional modules. We show, that in case of nilpotent and
+    solvable Lie algebras, the spectrum can be described as the set of simple submodules. We also
+    show, that this result does not hold for solvable Lie algebras and give the precise description
+    of the spectrum in case of the Borel subalgebra of semisimple Lie algebra.
+\end{abstract}
+
 \tableofcontents
 \section{Introduction}%
 \label{sec:introduction}
@@ -63,7 +91,7 @@ style=alphabetic
 \label{sec:preliminaries}
 \input{preliminaries.tex}
 
-\section{Taylor spectrum of $\lieg$-module}%
+\section{Taylor spectrum of \texorpdfstring{$\lieg$-module}{g-module}}%
 \label{sec:spectrumofmodule}
 \input{spectrumofmodule.tex}
 
@@ -82,6 +110,7 @@ style=alphabetic
 %\section{Case of nilpotent Lie algebras}
 %\label{sec:nilpotent}
 %\input{nilpotent.tex}
+
 
 %\section{Case of borel subalgebra of semisimple Lie algebra}
 %\label{sec:borel}

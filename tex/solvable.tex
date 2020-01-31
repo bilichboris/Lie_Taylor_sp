@@ -47,7 +47,7 @@ in this paragraph.
     Proposition 9 in chapter VII of \cite{bourbaki}.
 \end{proof}
 We call modules with only one weight monoweighted. The last Lemma show us, that any
-finite-dimensional module over nilpotent Lie algebra can be decomposed in sum of monoweighted
+finite-dimensional module over nilpotent Lie algebra can be decomposed in the sum of monoweighted
 submodules.  Now we are ready to formulate the main result.
 \begin{theorem}
     Let $\lieg$ be a nilpotent Lie algebra and $V$ -- finite-dimensional $\lieg$-module. Then the
@@ -117,8 +117,9 @@ semidirect products.
 
 Let $\mu \in \lieh^*$ a weight. For any $\lieg$-module $V$, one may observe, that $H^k(\lien,
 V_{-\mu}) \cong H^k(\lien, V)_{-\mu}$ for all $k$. Hence, if $V$ is irreducible $\lies$-module of
-highest weight $\lambda$, then $H^q(\lien, V)$ from \ref{t:coll:1} is nonzero for some $q$ if and only if $\mu =
-w(\lambda + \rho) - \rho$. Combining it with Lemma $\ref{l:definitions}$ we obtain the main result.
+highest weight $\lambda$, then $H^q(\lien, V_{-\mu})^\lieh$ from (\ref{t:coll:1}) is nonzero for
+some $q$ if and only if $\mu = w(\lambda + \rho) - \rho$. Combining it with Lemma
+$\ref{l:definitions}$ we obtain the main result.
 \begin{theorem}
    For an irreducible module $V$ of highest weight $\lambda$ over the semisimple Lie algebra
    $\lies$, the Taylor spectrum of $V$, regarded as the module over Borel subalgebra $\lieg \subset
@@ -127,3 +128,10 @@ w(\lambda + \rho) - \rho$. Combining it with Lemma $\ref{l:definitions}$ we obta
        \sigma_\lieg(V) = \{ \rho + w(\lambda + \rho)\colon w \in W(\Delta)\}
    \]
 \end{theorem}
+\begin{proof}
+    Indeed, by Lemma \ref{l:definitions}, $\nu \in \sigma_{\lieg}(V)$ if and only if $H^k(\lieg,
+    \bigwedge^n\lieg \otimes_\CC V_{-\nu})$ are nonzero for some $k$. As stated in the begining of
+    the section, $\bigwedge^n \lieg$ is isomorphic to $\CC_{2\rho}$, so $\bigwedge^n\lieg
+    \otimes_\CC V_{-\nu} \cong V_{2\rho - \nu}$. As shown above, the cohomology groups $H^k(\lieg,
+    V_{2\rho - \nu})$ are nonzero exactly when $2\rho - \nu = \rho - w(\lambda + \rho)$.
+\end{proof}
