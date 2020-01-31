@@ -10,7 +10,7 @@ In the article all algebras, including Lie algebras, are complex.  For Lie algeb
 use the notation $U\lieg$ to denote its enveloping algebra. We will denote by $\lmod{\lieg}$ and
 $\rmod\lieg$ the categories of left and right $\lieg$-modules respectively.  We write $\hat\lieg$
 for the set of set of isomorphism classes of simple finite-dimensional $\lieg$-modules and $\cmpl$
-for trivial bimodule.  For $\lieg$-module $V$ can be defined vector spaces 
+for trivial bimodule.  For $\lieg$-module $V$ one can define vector spaces 
 \begin{equation}
     V^\lieg = \{v\in V\colon g\cdot v = 0 ~ \forall g\in \lieg \}, 
 \end{equation}
@@ -26,7 +26,7 @@ isomorphic to $\Hom_\lieg(\CC, V)$ and $\CC \otimes_{U\lieg} V$ respectively.
 For the rest of this section we will denote by $\lieg$ an arbitary finite-dimensional Lie algebra.
 We define two functors $\square^*\colon \lmod{\lieg}^{op} \to \rmod{\lieg}$ and
 $\square^\circ\colon \lmod{\lieg} \to \rmod{\lieg}$ as follows. The first $\square^*$, called
-duality functor, sends $\lieg$-module V to it's dual vector space, on which the right action of
+duality functor, sends a $\lieg$-module V to it's dual vector space, on which the right action of
 $\lieg$ is defined as 
 \[
     (f\cdot g) (v) = f(g\cdot v),~\text{ for all } f\in V^*,~v \in V,~g\in\lieg.
@@ -38,10 +38,10 @@ action
 \]
 These two functors define equivallence of categories $\lmod\lieg$, $\rmod\lieg$, $\lmod\lieg^{op}$
 and $\rmod\lieg^{op}$. We will also denote by $\square^*$ and $\square^\circ$ functors from
-category of right $\lieg$-modules to left $\lieg$-modules, defined the same way. It is easy to see,
+category of right $\lieg$-modules to left $\lieg$-modules, defined in the same way. It is easy to see,
 that $(\square^*)^*$ and $(\square^\circ)^\circ$ are naturally isomorphic to the identity functor.
 
-Another pair of very important functors are $\square \otimes_\cmpl \square \colon \rmod\lieg \times
+Another pair of very important functors is $\square \otimes_\cmpl \square \colon \rmod\lieg \times
 \lmod\lieg \to \lmod\lieg$ and $\Hom_\cmpl(\square, \square)\colon \lmod\lieg^{op} \times
 \lmod\lieg \to \lmod\lieg$. If $V \in \rmod\lieg$ and $W \in \lmod\lieg$, then $V \otimes_\cmpl W$
 is the tensor product of $V$ and $W$ as vector space with action of $\lieg$, fully determined by
@@ -59,7 +59,7 @@ $V^\circ \otimes_\CC W$ (resp. $V \otimes_\CC W^\circ$).
 
 For $V\in \lmod\lieg$ and $S \in \hat\lieg$, we will write $V_{S}$ for the $\lieg$-module
 $S\otimes_\CC V$.  If S is one-dimensional, it is fully determined by the character $\lambda \in
-(\lieg/[\lieg, \lieg])$ and in this case we will simply write $V_\lambda$ for it. For example,
+(\lieg/[\lieg, \lieg])$ and in this case we will simply write $V_\lambda$ for $V_S$. For example,
 $\CC_\lambda$ stands for one-dimensional module with action, given by $g\cdot s = \lambda(g)s$ for
 all $s\in \CC_\lambda$ and $g \in \lieg$. We will also use the notation $V_{-S}$ for the module
 $S^* \otimes_\CC V$, which is motivated by the fact, that if $S$ is again one-dimensional with
@@ -67,7 +67,7 @@ character $\lambda$, then $V_{-S}$ is isomorphic to $V_{-\lambda}$.
 
 \subsection{Homology and cohomology of Lie algebras}
 In this paragraph we recall the definitions of Lie algebra cohomology, which can be found in any
-related textbook \cite{weibel}.
+related textbook (for example \cite{weibel}).
 
 
 \begin{definition}
@@ -99,7 +99,7 @@ The following fact about homology will be used in the text.
     for all $k\in \ZZ_{\geq 0}$.
 \end{lemma}
 \begin{proof}
-    Since functors $\CC\otimes_{U\lieg}(\square \otimes_\CC W)$ and $\square \otimes_{U\lieg} W$
+    Since the functors $\CC\otimes_{U\lieg}(\square \otimes_\CC W)$ and $\square \otimes_{U\lieg} W$
     are naturally isomorphic, it suffices to show, that if $P_\bullet \to V$ is a flat resolution
     of $V$, then $P_\bullet \otimes_\CC W$ is a flat resolution of $V\otimes_\CC W$.
 
@@ -110,11 +110,12 @@ The following fact about homology will be used in the text.
 \end{proof}
 
 A useful variation of Poincare duality holds for finite dimensional Lie algebras. Let $n = \dim
-\lieg$. We endow one-dimensional vector space $\bigwedge^n \lieg$ with structure of left
+\lieg$. We endow the one-dimensional vector space $\bigwedge^n \lieg$ with structure of left
 $\lieg$-module, which extends adjoint action by Leibnitz rule. 
 
 \begin{theorem}[Poincare duality] \label{t:poincare}
-    For $0 \leq k \leq n$ and any left $\lieg$-module $V$, there are vector space isomorphism 
+    For $0 \leq k \leq n$ and any left module $V$ over Lie algebra $\lieg$ of dimension $n$, there
+    are vector space isomorphism 
     \[
         H^k(\lieg, V^*) \cong H_k(\lieg, V)^*,
     \]
