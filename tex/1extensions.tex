@@ -9,8 +9,8 @@ sequence of Lie algebras
 where $\CC_\lambda$ is one-dimensional $\lieh$-module, such the commutator in $\lieg$ is given by
 $[g,c] = \lambda(\pi(g))c$ for all $g \in \lieg$ and $c \in \CC_\lambda$.  The fundamental result of
 Lie algebra cohomology theory states that isomorphism classes of such extensions are in one-to-one
-correspondence with the set $H^2(\lieg,\CC_\lambda) = \Ext^2_{U\lieh}(\cmpl, \cmpl_\lambda)$. Let
-us recall how to construct the bijection. Let $\xi \in Hom_\CC(\bigwedge^2\lieg, \CC_\lambda)$ be a
+correspondence with the set $H^2(\lieh,\CC_\lambda) = \Ext^2_{U\lieh}(\cmpl, \cmpl_\lambda)$. Let
+us recall how to construct the bijection. Let $\xi \in Hom_\CC(\bigwedge^2\lieh, \CC_\lambda)$ be a
 cocycle. We define Lie bracket on the vector space $\lieg = \CC_\lambda \oplus \lieh$ by 
 \[
     [(h_1, v_1), (h_2, v_2)]_\xi= ([h_1, h_2], \lambda(h_1) v_2 - \lambda(h_2) v_1 +
@@ -21,13 +21,14 @@ cocycle and it can be shown, that cohomologous cocycles induce isomorphic extens
 \cite{weibel}).
 
 From now on and untill the end of the paragraph, we write $\lieg$ for a one-dimensional extension
-of $\lieh$, represented by cocycle $\xi \in Hom_\CC(\bigwedge^2\lieg, \CC_\lambda)$. We also use
-the notation $\mathfrak{c}$ for an ideal $\CC_\lambda\subset \lieg$. Note, that if $S \in
-\hat\lieh$ -- ireducible $\lieh$-module, than $S^\pi$ is also irreducible as $\lieg$-module, thus
-we will identify $\hat\lieh$ with subset of $\hat\lieg$. Assume that we have a $\lieh$-module $V$,
-and we want to compute it's spectrum $\sigma_\lieg (V^\pi)$, here $V^\pi$ is $V$ considered as
-$\lieg$-module via the homomorphism $\pi$. The following Theorem gives us some approximations for
-the desired result.
+of $\lieh$, represented by cocycle $\xi \in Hom_\CC(\bigwedge^2\lieh, \CC_\lambda)$. We also use
+the notation $\mathfrak{c}$ for an ideal $\CC_\lambda\subset \lieg$. If $V$ is an $\lieh$ module,
+we denote by $V^\pi$ the same vectore space, considered as $\lieg$-module with action determined by
+action of $\lieh$ and homomorphism $\pi$. Note, that if $S \in \hat\lieh$ -- ireducible
+$\lieh$-module, than $S^\pi$ is also irreducible as $\lieg$-module, thus we will identify
+$\hat\lieh$ with subset of $\hat\lieg$. Assume that we have a $\lieh$-module $V$, and we want to
+compute it's spectrum $\sigma_\lieg (V^\pi)$, here $V^\pi$ is $V$ considered as $\lieg$-module via
+the homomorphism $\pi$. The following Theorem gives us some approximations for the desired result.
 \begin{theorem} \label{t:1ext}
     Let $\lieh$, $\lieg$ and $V$ be as above. Then:
     \begin{enumerate}
@@ -46,7 +47,7 @@ the desired result.
     \colon s \in S\, c \in \mathfrak{c}\}$ is a submodule of $S$. Since $S$ is ireducible it is
     either $0$ or $S$. But if it is $0$, then $S$ is actually an $\lieh$ module and it contradicts
     our assumption, so $\mathfrak{c}S = S$ and $S_\mathfrak{c} = 0$. The same argument is used
-    to show that the set $S^\mathfrak{c}$ equals to $0$. The Hochsild-Serre spectral sequence
+    to show that the set $S^\mathfrak{c}$ equals to $0$. The Hochschild-Serre spectral sequence
     $E^2_{p, q} = H_p(\lieh, H_q(\mathfrak{c}, V_{-S}))$ convergers to $H_k(\lieg, V_{-S})$, so it
     suffices to prove that $H_q(\mathfrak{c}, V_{- S})= 0$. The only possible nonzero homology
     groups are $H_0(\mathfrak{c}, V_{-S}) = (V_{-S})_\mathfrak{c} \cong (S^*)_\mathfrak{c}.
@@ -56,7 +57,7 @@ the desired result.
 
     Now let $S \in \hat\lieh$. Then, as $\lieh$ modules, the homology groups $H_0(\mathfrak{c},
     V_{-S})$ and $H_1(\mathfrak{c}, V_{-S})$ are isomorphic to $V_{-S}$ and $V\otimes_\CC
-    \CC_\lambda$ respectively. The Hochsild-Serre spectral sequence stabilizes on the third page
+    \CC_\lambda$ respectively. The Hochschild-Serre spectral sequence stabilizes on the third page
     and the nonzero differntials in $E^2$ are $d_k\colon H_k(\lieh, V_{-S}) \to H_{k - 2}(\lieh,
     V_{-S}\otimes_\CC \CC_\lambda)$. These differentials can be described as the Yoneda product on
     the class $[\xi] \in \Ext_2(\CC, \CC_\lambda)$ and the spectral sequence collapses if and only
