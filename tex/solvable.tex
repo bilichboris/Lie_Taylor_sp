@@ -5,17 +5,18 @@ space of characters $(\lieg/[\lieg,\lieg])^*$. In this case, computing Taylor sp
 job even for the trivial module $\CC$. For a finite-dimensional $\lieg$-module $V$ by the set of
 weights $\omega(V) \subset \hat\lieg$ we mean the set of diagonal matrix entries in triangular
 basis for $V$. It is independent on the choice of upper triangular basis and can be also described
-as the set of one-dimensional subfactors of $V$\cite{humphreys}. Consider the adjoint
+as the set of one-dimensional subfactors of $V$ \cite{humphreys}. Consider the adjoint
 representation $\ad\lieg \in \lmod\lieg$. The set of weights $\omega(\ad\lieg)$ is called
 Jordan-H{\"o}lder values of $\lieg$.  We denote by $2\rho$ the sum of all Jordan-H{\"o}lder values
 with multiplicites. By definition, it is the character of the adjoint representation, so it
 coincides with  the weight of the module $\bigwedge^n\lieg$, defined in section
-\ref{sec:preliminaries}, because, by definition, $2\rho$.  The following restriction on possible elements in the spectrum of the
+\ref{sec:preliminaries}.  The following restriction on possible elements in the spectrum of the
 trivial module holds.
 \begin{theorem} \label{t:jordanholder}
     For any solvable Lie algebra $\lieg$ of dimension $n$, if $\lambda \in \hat\lieg$ is in the
-    spectrum $\sigma_\lieg(\CC)$, then it is the sum of at most $n$ Jordan-H{\"o}lder values of
-    $\lieg$. Moreover, if $\lambda \in \sigma_\lieg(\CC)$, then $2\rho - \lambda$ is also in
+    spectrum $\sigma_\lieg(\CC)$, then it is the sum of at most $n$ distinct Jordan-H{\"o}lder
+    values of $\lieg$. By the word distinct we mean, that every value occurs no more than its
+    multiplicity.  Moreover, if $\lambda \in \sigma_\lieg(\CC)$, then $2\rho - \lambda$ is also in
     $\sigma_\lieg(\CC)$.
 \end{theorem}
 \begin{proof}
@@ -43,8 +44,9 @@ generally, there is often more than one element in the spectrum of $\CC$.
    commutator, given by $[e_1, e_2] = e_2$ and $[e_1, e_3] = \lambda e_3$ for some $\lambda \in
    \CC$. The space of characters is one dimensional, so we identify it with $\CC$ by evaluation on
    $e_1$. Then $\sigma_\lieg(\CC) = \{0,1,\lambda, 1 + \lambda\}$. Indeed, $0$ and $2\rho = 1 +
-   \lambda$ is always in the spectrum, and for $1$ and $\lambda$ the first homology groups are
-   non-vanishing.
+   \lambda$ is always in the spectrum, and for $1$ and $\lambda$ one may observe, that the second
+   differential has one-dimensional image, whereas the first differential has kernel of dimension
+   $3$, so the first homology groups are non-vanishing.
 \end{example}
 
 Nevertheless, for some nice classes of solvable Lie
@@ -132,10 +134,12 @@ semidirect products.
 \end{proof}
 
 Let $\mu \in \lieh^*$ be a weight. For any $\lieg$-module $V$, one may observe, that $H^k(\lien,
-V_{-\mu}) \cong H^k(\lien, V)_{-\mu}$ for all $k$. Hence, if $V$ is irreducible $\lies$-module of
-highest weight $\lambda$, then $H^q(\lien, V_{-\mu})^\lieh$ from (\ref{t:coll:1}) is nonzero for
-some $q$ if and only if $\mu = w(\lambda + \rho) - \rho$. Combining it with Lemma
-$\ref{l:definitions}$ we obtain the main result.
+V_{-\mu}) \cong H^k(\lien, V)_{-\mu}$ for all $k$. This follows from the fact, that $V$ and
+$V_{-\mu}$ are isomorphic as $\lien$-modules, so the action of $\lieg$ on the chain complexes for
+computing cohomology of these modules differ by $\mu$, thus the same is true for the homology.
+Hence, if $V$ is irreducible $\lies$-module of highest weight $\lambda$, then $H^q(\lien,
+V_{-\mu})^\lieh$ from (\ref{t:coll:1}) is nonzero for some $q$ if and only if $\mu = w(\lambda +
+\rho) - \rho$. Combining it with Lemma $\ref{l:definitions}$ we obtain the main result.
 \begin{theorem} \label{t:borelspectrum}
    For an irreducible module $V$ of highest weight $\lambda$ over the semisimple Lie algebra
    $\lies$, the Taylor spectrum of $V$, regarded as the module over Borel subalgebra $\lieg \subset
